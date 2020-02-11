@@ -9,8 +9,6 @@ const cloudCover = document.querySelector('#cloudCover')
 const uvIndex = document.querySelector('#uvIndex')
 const button = document.createElement('button')
 
-
-
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
     if (document.getElementById('more-info') != null)
