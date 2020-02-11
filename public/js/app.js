@@ -23,11 +23,7 @@ weatherForm.addEventListener('submit', (e) => {
     uvIndex.textContent = ''
     button.textContent = ''
 
-
-
-
-
-    fetch('http://localhost:3000/weather?address=' + location).then((response) => {
+    fetch('/weather?address=' + location).then((response) => {
 
         response.json().then((data) => {
 
@@ -43,7 +39,7 @@ weatherForm.addEventListener('submit', (e) => {
             }
 
             button.addEventListener('click', (e) => {
-                fetch('http://localhost:3000/weather/moreInfo?address=' + location).then((response) => {
+                fetch('/weather/moreInfo?address=' + location).then((response) => {
                     response.json().then((data) => {
 
                         if (data.error) {

@@ -7,6 +7,7 @@ const moreInfo = require('./utils/forecast-moreInfo')
 
 
 const app = express()
+const port = process.env.PORT || 3000
 
 // Define paths for express configuration
 const publicDirPath = (path.join(__dirname, '../public'))
@@ -98,10 +99,6 @@ app.get('/weather/moreinfo', (req, res) => {
 
 })
 
-
-
-
-
 app.get('/products', (req, res) => {
 
     if (!req.query.search) {
@@ -135,6 +132,6 @@ app.get('*', (req, res) => {
 
 })
 
-app.listen(3000, () => {
-    console.log('The server is up on port 3000')
-}) // port 3000 is the deafault port 
+app.listen(port, () => {
+        console.log('The server is up on port ' + port)
+    }) // port 3000 is the deafault port
