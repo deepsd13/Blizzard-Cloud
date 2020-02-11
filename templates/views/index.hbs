@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Blizzard Cloud </title>
+    <link rel="icon" href="/img/logo.png">
+    <link rel='stylesheet' href='/css/styles.css'>
+    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <img class='logo' src="/img/logo.png">
+        {{>header}}
+        <h1 class=>{{title}}</h1>
+
+        <form>
+            <input type="text" placeholder="Location">
+            <button class='search'>Search</button>
+        </form>
+        <div id="main-content">
+            <p id="message-1"></p>
+            <p id="message-2"></p>
+        </div>
+
+
+        <div id>
+            <p id="humidity"></p>
+            <p id="windSpeed"></p>
+            <p id="cloudCover"></p>
+            <p id="uvIndex"></p>
+        </div>
+
+    </div>
+
+    {{>footer}}
+
+    <script src='/js/app.js'></script>
+</body>
+
+</html>
